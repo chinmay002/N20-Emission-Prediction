@@ -17,7 +17,7 @@ def prediction(year,experiment,data_use,month,n_rate,pp2,pp7,air_t,daf_td,daf_sd
     data = datause_dict[data_use]
     mnth =months_dict[month]
 
-    model = joblib.load('C:/Users/Chinmay/Desktop/THMLC/N20/pkl/catboost.pkl.compressed')
+    model = joblib.load('pkl/catboost.pkl.compressed')
     pred = model.predict([year,exp,data,mnth,n_rate,pp2,pp7,air_t,daf_td,daf_sd,wfp,nh4,no3,clay,som])
 
     return np.round(np.exp(pred),2)
@@ -58,7 +58,7 @@ def main():
 
     if st.button("Predict"):
             result = prediction(year,experiment,data_use,month,n_rate,pp2,pp7,air_t,daf_td,daf_sd,wfp,nh4,no3,clay,som)
-            st.success('Estimated N2O emmission is  {}'.format(result))
+            st.success('Estimated N2O emmission is  {} ppb/yr'.format(result))
             print(result)
 if __name__=='__main__':
     main()
