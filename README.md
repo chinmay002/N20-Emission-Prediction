@@ -16,7 +16,6 @@ Nitrous oxide is a potent greenhouse gas, with a global warming potential 298 ti
 4. Install the packages - pip install -r requirements.txt
 5. Run the app - streamlit run app.py 
 
-![Test Image 4](https://github.com/chinmay002/N20-Emission-Prediction/n2o_app.png)
 ![Test Image 3](/n2o_app.png)
 # Heroku APP
 link : https://n2oemission.herokuapp.com/
